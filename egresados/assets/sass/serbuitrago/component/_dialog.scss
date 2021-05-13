@@ -1,0 +1,83 @@
+/***************************************************
+ ********************** DIALOG *********************
+ ***************************************************/
+
+
+ .container-dialog{
+    @include flexbox();
+    @include position(fixed ,9000,none,0,none,0, 100vh, 100vw);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: .9em;
+    transition: .64s ease-in-out;
+
+    &.visible{
+        background-color:  $background-dialog-m;  
+
+        .dialog{
+           bottom: 0;
+           right: 0;
+           transform: rotate(0);
+        } 
+    }
+ }
+
+.dialog{ 
+    position: relative;
+    bottom: -100vw;
+    right: -100vh;
+    display: flex;
+    align-items: center;
+    max-width: $width-dialog;
+    max-height:  $height-dialog;
+    width: 60%;
+    height: 80%;
+    background-color:  $background-dialog-p;  
+    transform: rotate(32deg);
+    transition: .64s ease-in-out;
+}
+
+.dialog__container-image{
+    @include flexbox(flex-end,flex-end);
+    height: 100%;
+    overflow: hidden;
+    width: 40%;
+    img {
+        width: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: fill;
+        height: 100%;
+    }
+}
+
+.dialog__container__info{
+    width: 60%;
+    height: 100%;  
+    padding: 3em;
+    overflow: hidden;   
+}
+
+.dialog__link-close{
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 2.5em;
+    height: 2.5em;
+    font-weight: 300;
+    border-radius: 100%;
+    background: rgba(0,0,0,1);
+    border: $border-2;
+    z-index: 4;
+    font-size: 1em; 
+    line-height: 2em;
+    color: $font-color-3;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover{
+        background: rgba(0,0,0,.6);
+    }
+}

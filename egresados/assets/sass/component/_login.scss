@@ -1,0 +1,224 @@
+/***************************************************
+*********************** LOGIN **********************
+***************************************************/
+.container-svg__login{
+    svg{
+        path{
+            &.login-path-1{
+                display: block;
+            }
+    
+            &.login-path-2{
+                 display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1226px) {
+        svg{
+           path{
+              &.login-path-1{
+                 display: none;
+              }
+     
+              &.login-path-2{
+                  display: block;
+              }
+           }
+        }
+    } 
+  
+     @media screen and (max-width: 500px) {
+        svg{
+           height: 80%; 
+           position: absolute;
+           bottom: 0;
+        }
+    } 
+}
+
+.student-background-image{
+    @include image(block,46%);
+    transition: all 0.5s linear;
+
+    @media screen and (max-width: 1226px) {
+        @include position(absolute,1,none,none,0,0,60%,auto);
+    }
+
+    @media screen and (max-width: 500px) {
+        height: 50%;
+    }
+}
+
+$ancho-login:25em;
+
+.container-login-main{
+    @include position(absolute, 1, 0,none,0,0, 100vh, 50vw); 
+    overflow: hidden;
+
+    .container-generic-login{
+      width: $ancho-login;
+      box-shadow: $box-shandow-3;
+      padding: 1.5em 1em;
+      border-radius: .7em;
+
+        .logo{
+            object-fit: cover;
+            margin-bottom: 1em;
+        }
+
+        .title{
+            font-size: 1.2em;
+        }
+
+        .subtitle{
+            font-size: 1em;
+        }
+
+        .btn{
+            margin-bottom: 0em;
+        }
+
+        .loader-google{
+            display: none;
+            margin: 1em; 
+
+            &.visible-display{
+             display: block;
+            }
+        }
+    }
+
+    /***************************************************
+    ********************** LOGIN ***********************
+    ***************************************************/
+    .container-login{
+   
+        transform: scale(1);
+        display: block;
+        transform: all 1s linear;
+  
+        &.hidden{
+           transform: scale(0);
+           display: none;
+        }
+  
+        .login__form{
+           
+          .container__ {
+              margin: 0em;
+              margin-bottom: 1em;
+
+              .selector{
+                width: 40%;
+                margin: 0em 1em;
+               .input-selector{
+                  font-weight: normal;
+                  padding: 0.5em;
+               } 
+             } 
+
+             .container___{
+                width: 50%;
+                .span{
+                    margin: 0rem 1rem;
+                    display: block;
+                    text-align: right;
+                    color: $font-color-1;
+                    font-size: 13px;
+                    margin-top: 0.5em;
+                    .link{
+                       font-weight: bold;
+                       text-transform: capitalize;
+                       font-size: 13px;
+                    }
+                }
+             }
+           }
+        }
+    }
+
+    /**************************************************
+    **************** SIGN IN AND FORGOT ***************
+    ***************************************************/
+    .container-sign-in,
+    .container-forgot{
+        display: none;
+        transform: scale(0);
+        transition: all 1s linear;
+
+        &.visible{
+         display: block;
+         transform: scale(1);
+        }
+
+        .container___{
+            justify-content: flex-end;
+            font-size: 13px;
+            width: 62%;
+            margin: auto;
+            .span{
+                color: $font-color-1;
+                font-size: 13px;
+                .link{
+                    font-size: 13px;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+         }
+    }
+
+    @media screen and (max-width: 1226px) {
+        top: 0;
+        left: 0;
+        min-width: 40em; 
+     }
+  
+     @media screen and (max-width: 500px) {
+        height: 60%;
+        min-width: 10em;
+        width: 100%;
+  
+        .container-generic-login{
+           width: 70%;
+           overflow: hidden;
+  
+           .title{
+                font-size: 1em;
+           }
+
+           .subtitle{
+              font-size: 0.8em;
+           }
+  
+           .form__control{
+                min-width: 12em;
+                max-width: 12em;
+            }
+        }
+  
+        .container-login{
+           
+           .login__form{
+
+                .container__ {
+                    margin-bottom: 0.5em;
+                    .selector{
+                        width: 100%;
+                        margin-bottom: 1em;
+                    }
+                    .container___{
+                        width: 100%;
+                        .span{
+                            font-size: 10px;
+                            .link{
+                               font-size: 10px;
+                            }
+                        }
+                   }
+               }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/***************************************************
+ ******************* BUTTONS ***********************
+ ***************************************************/
+ .btn{
+    @include button($color-button-2);
+    border-radius: 1em;
+    color:$font-color-button-3;
+
+    &:hover{
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+ }
+
+ .btn-x2{
+    margin: 1em auto;
+    padding: 0.5em 2em;
+    font-weight: bold;
+    &:hover,
+    &:focus{
+       background-color: transparent;
+       color: $font-color-button-1;
+    }
+
+    &.ocultar{
+       display: none;
+    }
+ }
+
+/***************************************************
+********************** LINKS ***********************
+***************************************************/
+
+.link {
+    @include button(transparent);
+    padding: 0rem;
+    color:$font-color-button-1;
+
+    &:hover{
+        opacity: 0.8;
+        background-color: transparent;
+        
+    }
+ }

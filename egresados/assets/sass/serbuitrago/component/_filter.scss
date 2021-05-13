@@ -1,0 +1,26 @@
+/***************************************************
+ ******************* FILTERS ***********************
+ ***************************************************/
+ .filter-1 {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+	background: map-get($colores-rgba, 5);
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: $degraded-filter-1;
+		mix-blend-mode: darken;
+	}
+}
+
+.image-filter-ligthen {
+	background-blend-mode: lighten;
+	filter: grayscale(100%);
+}

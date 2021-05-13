@@ -1,0 +1,18 @@
+/***************************************************
+********************* CONTAINER ********************
+***************************************************/
+.container-section-main{
+    margin-top: 2em;
+    width: 100%;
+
+    .container-headers-absolute-center-section{ 
+        left: 50%;
+        top: 37%;
+        transform: translate(-50%, -50%);
+
+        @media screen and (max-width: 800px) {
+            top: 50%;
+        }
+    }
+}
+

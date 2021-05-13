@@ -1,0 +1,32 @@
+/*************************************************** 
+ ************************ LOADER *******************
+ ***************************************************/
+.loader-google {
+	display: block;
+	span {
+		display: inline-block;
+		margin-top: 10px;
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		&:not(:first-child) { margin-left: 10px; }
+	}
+
+	@for $i from 1 through 4 {
+		$cont: ($star-colores - 1) +$i;
+		$t: $i * -0.25;
+		
+		span:nth-child(#{$i}) {
+			background: map-get($colores, $cont);
+			animation: move-loader-google 1s ease-in-out (#{$t}s) infinite alternate;
+		}
+	}
+}
+
+/*************************************************** 
+ ********************** ANIMATES *******************
+ ***************************************************/
+@keyframes move-loader-google {
+	from { transform: translateY(-10px); }
+	to { transform: translateY(5px); }
+}

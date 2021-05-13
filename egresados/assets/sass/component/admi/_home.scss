@@ -1,0 +1,124 @@
+.container-home-reports{
+    margin: 3em 0em;
+    background-color: $quartet-color;
+    width: 100%;
+    height: auto;
+    padding: 2em 0em;
+    overflow: hidden;
+
+    .container-dropdown{
+        float: right;
+        margin-bottom: 2em;
+        margin-right: 1em;
+    }
+
+
+    table{   
+        width: 100%;
+        overflow: hidden;   
+        td{
+            padding: 1em;
+            .container-form-pdf{    
+                display: block;
+                margin: auto;
+                position: relative;
+                width: 40%;
+                padding: 1em;
+                border-radius: 1em;
+                box-shadow: $box-shandow-1;
+                .title{
+                    width: 100%;
+                    font-size: 1.4em;
+                    margin-bottom: 1em;
+                }
+            }
+            .form__field{
+                padding: 0em;
+                margin: 0em;
+            }
+
+            .container-btn-pdf{
+                .btn{
+                    margin-left: 2em;
+                }
+            }
+
+            .btn-view-table-pdf_{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                font-size: 1.2em;
+                color: #111111;
+                width: 30px !important;
+                padding:0em !important;
+                border-color: #fff !important;
+                width: auto;
+            }
+        }
+    }
+
+    .view-data-pdf{
+        margin: 4em auto;
+        border: $border-1;
+        padding: 1em;
+        width: 80%;
+        margin-bottom: 2em;
+        position: absolute;
+        top: -100%;
+        transition: all .5s linear;
+        
+        &.visible-table{ 
+            position: relative;
+        }
+    }
+
+    @media screen and (max-width: 1288px) {    
+        table{
+
+            td{
+                form{   
+                  width: 80%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1040px) {    
+        table{
+
+            td{
+                form{   
+                  width: 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 828px) {    
+        table{
+
+            td{
+                form{   
+                    .form__field-x2{
+                        .form__field{
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 478px) {    
+        table{
+            tr{ 
+                overflow: hidden;
+                td{
+                    width: 100%;
+                    float: left;
+                }
+            }
+        }
+    }
+}

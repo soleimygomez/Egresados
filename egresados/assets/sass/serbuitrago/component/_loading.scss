@@ -1,0 +1,135 @@
+/***************************************************
+ ******************** LOADING **********************
+ ***************************************************/
+ .loading{
+    background-color: $tertiary-color-rgba;
+	
+
+    div.container{
+      min-height: 100vh;
+
+      h2{
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font-size: 6em;
+            font-weight: 100;
+
+            span{
+				position: relative;
+				color: transparent;
+				font-weight: none;
+				-webkit-text-stroke: $text-stroke-loading-1;
+				transition: all 1s linear;
+
+                &::before,
+				&::after {
+					content: attr(data-text);
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				&::before {
+					z-index: 10;
+					-webkit-text-stroke: $text-stroke-loading-2;
+					-webkit-animation: loading-one-before 1s ease-in-out infinite;
+					-o-animation: loading-one-before 1s ease-in-out infinite;
+					animation: loading-one-before 1s ease-in-out infinite;
+                }
+
+                &::after {
+					z-index: 9;
+					-webkit-text-stroke: $text-stroke-loading-3;
+					-webkit-animation: loading-one-after 1s ease-in-out infinite;
+					-o-animation: loading-one-after 1s ease-in-out infinite;
+					animation: loading-one-after 1s ease-in-out infinite;
+					color: transparent;
+				}
+                
+                @for $i from 1 through 8 {
+					$suma: 1+$i;
+                    $valor: $suma * 0.1;
+                    &:nth-child(#{$i})::before,
+                    &:nth-child(#{$i})::after {
+                        animation-delay: #{$valor}s;
+                    }
+                }
+            }
+        }
+	}
+	
+	//***********************************************
+    // QUERY
+    //***********************************************
+	@media screen and (max-width: 900px) {
+		div.container{
+			h2 {
+				font-size: 5em;
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		div.container{
+			h2 {
+				font-size: 4em;
+			}
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		div.container{
+			h2 {
+				font-size: 2.3em;
+
+				span{
+					@for $i from 1 through 8 {
+						$valor: ($i+3) *0.1;
+						&:nth-child(#{$i})::before,
+						&:nth-child(#{$i})::after {
+							animation-delay: #{$valor}s;
+						}
+					}
+				}
+			}
+		}
+
+		
+	}
+
+	@media screen and (max-width: 270px) {
+		div.container{
+			h2 {
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+ }
+
+ /***************************************************
+ *************** LOADING - ANIMATIONS ***************
+ ***************************************************/
+@keyframes loading-one-before {
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate (30px, -30px);
+	}
+}
+
+@keyframes loading-one-after{
+    0%,
+	100% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(15px, -15px);
+	}
+}

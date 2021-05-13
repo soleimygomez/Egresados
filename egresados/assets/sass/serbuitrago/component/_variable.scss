@@ -1,0 +1,214 @@
+// COLORES RGBA
+$colores-rgba:(
+    1: rgba(0,0,0,.2),           // NEGRO CLARO
+	2: rgba(255, 64, 64, .7),    // ROJO LIGERO
+	3: rgba(19, 35, 47, .8),     // NEGRO AZULADO
+	4: rgba(0, 0, 0, .8),        // NEGRO OSCURO CLARO
+	5: rgba(255,255,255,.8),     // BLANCO 
+	6: rgba(0, 0, 0, .5),        // NEGRO INTERMEDIO
+
+    // COLORES ALERTS
+    100: rgba(255, 64, 64, .6),   // ROJO LIGERO
+	101: rgba(34,114,180,.5),     // AZUL CELESTE
+	
+	// COLORES TEXT STROKE LOADING
+	200: rgba(255, 255, 255, .2),  // BLAMCO GRIS
+	201: rgba(255,255,255,1),      // BLANCO
+	202: rgba(255, 64, 64, .7),    // ROJO LIGERO
+
+	// COLORES DEGRADED
+	300: rgba(255, 102, 0,.5),     // NARANJADO
+	301: rgba(40%, 20%, 60%, 50%), // MORADO CLARO
+);
+
+// COLORES 
+$colores:(
+	// COLORES FONDOS
+	1: #34332F,                              			   // NEGRO OSCURO  
+	2: #E2031A,                            			       // ROJO
+	3: #FFFFFF,                                            // BLANCO
+	4: #f9f9f9,                                            // GRIS DOS 
+
+	// COLORES LETRAS
+	20: #34332F,                              			    // NEGRO OSCURO
+    21: #E2031A,                            			       // ROJO
+    22: #FFFFFF,                            			    // BLANCO
+	23: #C7C7C7,                                            // GRIS
+
+	// COLORES BUTTON
+    40: #34332F,                              			    // NEGRO OSCURO
+    41: #E2031A,                            			       // ROJO
+	42: #FFFFFF,                            			    // BLANCO
+
+
+	// COLORES LOADER
+	300: #F4B400,                                           // AMARRILLO
+	301: #4285F4,                                           // AZUL
+	302: #0F9D58,                                           // VERDE
+	303: #34332F,                                           // NEGRO OSCURO
+
+	// COLORES TABLES
+	500: #F4B400,                                           // AMARRILLO
+	501: #E2031A,                            			       // ROJO
+	502: #EAF3F3,                                           // AZUL CLARO
+	503: #FFEBCD,                                           // PIEL 
+	504: #FFFFFF,                            			    // BLANCO
+	505: #fdf5e6,                                           // CREMA
+	506: #167F92,                                           // AZUL
+	507: #D9E4E6
+);
+
+// BOX SHANDOW
+$box-shandow:(
+	1: 0px 0px 30px -5px map-get($colores-rgba, 1),            // NEGRO CLARO
+	2: 0px 0px 30px -5px map-get($colores-rgba, 2),            // ROJO LIGERO
+	3: 0px 0px 30px -5px map-get($colores-rgba, 3),            // NEGRO AZULADO
+	4: 0px 0px 30px -5px map-get($colores-rgba, 5),            // BLANCO
+);
+
+// TEXT STROKE
+$text-stroke:(
+	1: 1px map-get($colores-rgba, 200),   		            // BLANCO GRIS
+	2: 1px map-get($colores-rgba, 201),                     // BLANCO
+	3: 1px map-get($colores-rgba, 202),                     // ROJO LIGERO
+);
+
+// DEGRADED
+$degraded:(
+	// DEGRADED FILTERS
+	300: linear-gradient(map-get($colores-rgba,300),map-get($colores-rgba,301)),  // DEGRADED ORANGE AND MORADO
+);
+
+//***********************************************
+// BODY
+//***********************************************
+$font-1: 'Muli', monospace, 'Times New Roman', sans-serif;
+$font-2:  monospace, 'Times New Roman', sans-serif;
+
+//***********************************************
+// FONTS
+//***********************************************
+$font-value-1: 16px;
+$font-value-2: 1em;
+$font-value-3: .9em;
+
+//***********************************************
+// COLORES
+//*********************************************** 
+$primary-color: map-get($colores, 1);   // NEGRO OSCURO
+$secondary-color: map-get($colores,2);  // NARANJADO
+$tertiary-color: map-get($colores,3);   // BLANCO
+$quartet-color: map-get($colores,4);    // GRIS DOS
+
+//***********************************************
+// COLORES RGBA
+//***********************************************
+$primary-color-rgba: map-get($colores-rgba, 1);     // NEGRO CLARO
+$secondary-color-rgba: map-get($colores-rgba, 2);   // ROJO LIGERO
+$tertiary-color-rgba: map-get($colores-rgba, 3);    // NEGRO AZULADO
+$quartet-color-rgba: map-get($colores-rgba, 4);     // NEGRO OSCURO CLARO
+$five-color-rgba: map-get($colores-rgba, 6);        // BLACK INTERMEDIO
+$six-color-rgba: map-get($colores-rgba, 5);         // BLANCO
+
+//***********************************************
+// FONT COLORES
+//***********************************************
+$font-color-1: map-get($colores, 20);   // NEGRO OSCURO
+$font-color-2: map-get($colores, 21);   // NARANJADO
+$font-color-3: map-get($colores, 22);   // BLANCO
+$font-color-4: map-get($colores, 23);   // GRIS
+
+//***********************************************
+// BORDERS
+//***********************************************
+$border-1: 1px solid $primary-color-rgba;
+$border-2: 1px solid $tertiary-color;
+
+//***********************************************
+// BOX SHANDOWS
+//***********************************************
+$box-shandow-1: map-get($box-shandow, 1);     // NEGRO CLARO
+$box-shandow-2: map-get($box-shandow, 2);     // ROJO LIGERO
+$box-shandow-3: map-get($box-shandow, 3);     // NEGRO AZULADO
+$box-shandow-4: map-get($box-shandow, 4);     // BLANCO
+
+//***********************************************
+// BUTTONS
+//***********************************************
+$color-button-1: map-get($colores, 40);     // NEGRO OSCURO
+$color-button-2: map-get($colores, 41);     // ROJO
+$color-button-3: map-get($colores, 42);     // BLANCO
+
+$font-color-button-1: $font-color-1;      // NEGRO OSCURO
+$font-color-button-2: $font-color-2;      // ROJO
+$font-color-button-3: $font-color-3;      // BLANCO
+$font-color-button-4: $font-color-4;      // GRIS
+
+//***********************************************
+// TABLE
+//***********************************************
+$background-table-thead: $secondary-color-rgba;
+
+$background-table-tbody-pair: map-get($colores, 502);
+$background-table-tbody-odd: map-get($colores, 504);
+
+$background-table-tbody-hover: map-get($colores, 501);
+
+$border-table-tbody: 1px solid map-get($colores, 505);
+$border-table: 1px solid map-get($colores, 507);
+
+//***********************************************
+// IMAGE
+//***********************************************
+$width-logo: 5em;
+$height-logo: $width-logo;
+
+$width-logo-max: 21.875em;
+$height-logo-max: 9.375em;
+
+$width-icon: 3em;
+$height-icon: $width-icon;
+
+
+//***********************************************
+// POSITION
+//***********************************************
+$max-value-z-index:16777271;
+
+//***********************************************
+// LOADING
+//***********************************************
+$text-stroke-loading-1: map-get($text-stroke,1);
+$text-stroke-loading-2: map-get($text-stroke,2);
+$text-stroke-loading-3:map-get($text-stroke,3);
+
+//***********************************************
+// LOADER
+//***********************************************
+$star-colores:300;
+
+//***********************************************
+// FILTER
+//***********************************************
+$degraded-filter-1: map-get($degraded, $key: 300);
+
+//***********************************************
+// NAVBARS
+//***********************************************
+$width-menu-left: 25em;
+$background-menu-left:$secondary-color-rgba;
+
+//***********************************************
+// DIALOG
+//***********************************************
+$background-dialog-m: $primary-color-rgba;
+$background-dialog-p: $tertiary-color;
+
+$width-dialog: 50em;
+$height-dialog: 37.5em;
+
+//***********************************************
+// CARD
+//***********************************************
+$width-card-rotate: 16em;
+$height-card-rotate: 21em;

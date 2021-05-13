@@ -1,0 +1,47 @@
+/***************************************************
+********************* REGISTER *********************
+***************************************************/
+.container-register-section{
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    overflow: hidden;
+    transition: all .6s linear;
+
+    .register-form{
+        width: auto;
+        max-width: 30em;
+        min-width: 30em;
+        margin: auto;
+        background-color: $tertiary-color;
+        box-shadow: $box-shandow-1;
+        border-radius: 0.9em;  
+        padding: 1em;
+        padding-bottom: 1.5em;
+        overflow: hidden;
+
+        .title{
+            font-size: 1.4em;
+            width: 50%;
+            height: auto;
+            margin: 0.5em auto;
+            margin-bottom: 1em;
+        }
+    }
+
+    @media screen and (max-width: 1296px) {
+        img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .register-form{
+            width: 100%;
+            min-width: 10em;
+        }
+    }
+}

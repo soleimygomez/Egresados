@@ -1,0 +1,52 @@
+/***************************************************
+ ******************** IMAGE ************************
+ ***************************************************/
+.logo{
+	display: block;
+	margin: auto;
+	width: $width-logo;
+	height: $height-logo;
+}
+
+.logo-max{
+	display: block;
+	margin: auto;
+	width: $width-logo-max;
+	height: $height-logo-max;
+}
+
+.image-80{
+	min-width: 100%;
+	display: block;
+	height: 80vh;
+	object-fit: fill;
+	background-position: center;
+	background-size: auto;
+	background-size: cover;
+
+	@media screen and (max-width: 800px) {
+        height: 40vh;
+    }
+}
+
+.image-dark{
+	filter:brightness(0.6);
+}
+
+//***********************************************
+//  ICONS
+//***********************************************
+.icon{
+	width: $width-icon;
+	height: $height-icon;
+	&:hover{
+        transform: scale(0.95);
+    }
+}
+
+.icon-awasome{
+	font-size: 1.4em;
+	&:hover{
+        transform: scale(0.95);
+    }
+}
